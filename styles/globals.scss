@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #FFF;
+  --black: #000;
+
+  --gray-10: #F7F7F8;
+  --gray-20: #DCDCE0;
+  --gray-30: #C1C1C7;
+  --gray-40: #A6A6AF;
+  --gray-50: #8C8C97;
+  --gray-60: #72727E;
+  --gray-70: #595963;
+  --gray-80: #414148;
+  --gray-90: #29292E;
+  --gray-100: #121214;
+
+  --primary: #F07724;
+  --primary-dark: #A3490C;
+  --primary-light: #FF8C40;
+
+  --secondary: #04D361;
+  --secondary-dark: #01873E;
+  --secondary-light: #1FFF84;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--gray-100);
+}
+
+body, input, textarea, button {
+  font: 400 1rem Inter, sans-serif;
+  color: var(--gray-60);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: Lexend, sans-serif;
+  color: var(--gray-10);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+}

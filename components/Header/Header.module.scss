@@ -1,0 +1,60 @@
+.header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  text-decoration: none;
+  font: 500 1.5rem 'Lexend', sans-serif;
+  svg {
+    fill: var(--primary);
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--primary);
+    border-radius: .3rem;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all .3s;
+
+    &:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+
+  li {
+    a {
+      text-decoration: none;
+      color: var(--gray-40);
+      transition: color .3s;
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+}

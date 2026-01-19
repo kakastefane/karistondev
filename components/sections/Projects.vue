@@ -90,9 +90,6 @@
 
 <script setup lang="ts">
 const { getProjects } = useContent()
-const projects = ref<any[]>([])
 
-onMounted(async () => {
-  projects.value = await getProjects()
-})
+const projects = computed(() => getProjects())
 </script>

@@ -28,49 +28,59 @@
         <!-- Right Side Actions -->
         <div class="flex items-center gap-4">
           <!-- Language Switcher -->
-          <button
-            @click="toggleLocale"
-            class="px-3 py-1.5 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors border border-neutral-300 dark:border-neutral-700 rounded-lg hover:border-neutral-400 dark:hover:border-neutral-600"
-            :aria-label="`Switch to ${locale === 'pt' ? 'English' : 'Português'}`"
-          >
-            {{ locale === 'pt' ? 'EN' : 'PT' }}
-          </button>
+          <ClientOnly>
+            <button
+              @click="toggleLocale"
+              class="px-3 py-1.5 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors border border-neutral-300 dark:border-neutral-700 rounded-lg hover:border-neutral-400 dark:hover:border-neutral-600"
+              :aria-label="`Switch to ${locale === 'pt' ? 'English' : 'Português'}`"
+            >
+              {{ locale === 'pt' ? 'EN' : 'PT' }}
+            </button>
+            <template #fallback>
+              <div class="px-3 py-1.5 text-sm invisible">EN</div>
+            </template>
+          </ClientOnly>
 
           <!-- Theme Toggle -->
-          <button
-            @click="toggleTheme"
-            class="p-2 text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors"
-            :aria-label="colorMode.value === 'dark' ? $t('theme.light') : $t('theme.dark')"
-          >
-            <svg
-              v-if="colorMode.value === 'dark'"
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <ClientOnly>
+            <button
+              @click="toggleTheme"
+              class="p-2 text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-50 transition-colors"
+              :aria-label="colorMode.value === 'dark' ? $t('theme.light') : $t('theme.dark')"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-              />
-            </svg>
-            <svg
-              v-else
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-              />
-            </svg>
-          </button>
+              <svg
+                v-if="colorMode.value === 'dark'"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+              <svg
+                v-else
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                />
+              </svg>
+            </button>
+            <template #fallback>
+              <div class="p-2 w-10 h-10 invisible"></div>
+            </template>
+          </ClientOnly>
 
           <!-- Mobile Menu Button -->
           <button

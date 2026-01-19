@@ -93,7 +93,8 @@
 
 <script setup lang="ts">
 const { getTestimonials } = useContent()
-const testimonials = ref<any[]>([])
+
+const testimonials = computed(() => getTestimonials())
 const currentIndex = ref(0)
 let autoplayInterval: NodeJS.Timeout | null = null
 
@@ -118,8 +119,7 @@ const stopAutoplay = () => {
   }
 }
 
-onMounted(async () => {
-  testimonials.value = await getTestimonials()
+onMounted(() => {
   startAutoplay()
 })
 

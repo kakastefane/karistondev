@@ -64,9 +64,7 @@
 
 <script setup lang="ts">
 const { getExperience } = useContent()
-const experiences = ref<any[]>([])
+const { locale } = useI18n()
 
-onMounted(async () => {
-  experiences.value = await getExperience()
-})
+const experiences = computed(() => getExperience())
 </script>

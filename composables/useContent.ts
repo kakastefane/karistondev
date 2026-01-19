@@ -1,161 +1,120 @@
 import type { Project, Testimonial, Experience, Service } from '~/types'
 
 export const useContent = () => {
-    // API endpoints - replace with your actual API URLs
-    const API_BASE_URL = '/api'
+    const { t } = useI18n()
 
-    // Fetch projects from API
-    const getProjects = async (): Promise<Project[]> => {
-        try {
-            // TODO: Connect to your API
-            // const data = await $fetch<Project[]>(`${API_BASE_URL}/projects`)
-            // return data
-
-            // Mock data for development
-            return [
-                {
-                    title: 'E-commerce de Moda',
-                    description: 'Loja virtual completa com integração de pagamento, sistema de gestão de estoque e painel administrativo.',
-                    type: 'E-commerce',
-                    image: '/images/project-1.jpg',
-                    link: '#',
-                },
-                {
-                    title: 'Site Institucional',
-                    description: 'Website moderno e responsivo para empresa de tecnologia com animações e design minimalista.',
-                    type: 'Website',
-                    image: '/images/project-2.jpg',
-                    link: '#',
-                },
-                {
-                    title: 'Sistema de Gestão',
-                    description: 'Plataforma web para gestão de processos internos com dashboard interativo e relatórios personalizados.',
-                    type: 'Sistema',
-                    image: '/images/project-3.jpg',
-                    link: '#',
-                },
-            ]
-        } catch (error) {
-            console.error('Error fetching projects:', error)
-            return []
-        }
+    // Fetch projects from i18n
+    const getProjects = (): Project[] => {
+        return [
+            {
+                title: t('projects.items.0.title'),
+                description: t('projects.items.0.description'),
+                type: t('projects.items.0.type'),
+                image: '/images/project-1.jpg',
+                link: '#',
+            },
+            {
+                title: t('projects.items.1.title'),
+                description: t('projects.items.1.description'),
+                type: t('projects.items.1.type'),
+                image: '/images/project-2.jpg',
+                link: '#',
+            },
+            {
+                title: t('projects.items.2.title'),
+                description: t('projects.items.2.description'),
+                type: t('projects.items.2.type'),
+                image: '/images/project-3.jpg',
+                link: '#',
+            },
+        ]
     }
 
-    // Fetch testimonials from API
-    const getTestimonials = async (): Promise<Testimonial[]> => {
-        try {
-            // TODO: Connect to your API
-            // const data = await $fetch<Testimonial[]>(`${API_BASE_URL}/testimonials`)
-            // return data
-
-            // Mock data for development
-            return [
-                {
-                    name: 'Ana Silva',
-                    role: 'CEO, Loja Fashion',
-                    text: 'Trabalho excepcional! O Kariston desenvolveu nossa loja virtual do zero e superou todas as expectativas. Profissional, dedicado e sempre disponível para ajudar.',
-                    rating: 5,
-                },
-                {
-                    name: 'Carlos Mendes',
-                    role: 'Diretor de TI, Tech Solutions',
-                    text: 'Excelente desenvolvedor! Entregou nosso projeto no prazo e com qualidade superior. Recomendo fortemente seus serviços.',
-                    rating: 5,
-                },
-                {
-                    name: 'Marina Costa',
-                    role: 'Fundadora, Studio Criativo',
-                    text: 'Parceria de longa data! O Kariston sempre entrega sites incríveis e é muito atencioso com os detalhes. Nosso site ficou perfeito!',
-                    rating: 5,
-                },
-                {
-                    name: 'Ricardo Oliveira',
-                    role: 'Gerente, Empresa XYZ',
-                    text: 'Profissional altamente qualificado. Desenvolveu um sistema personalizado que otimizou completamente nossos processos internos.',
-                    rating: 5,
-                },
-                {
-                    name: 'Juliana Ferreira',
-                    role: 'E-commerce Manager',
-                    text: 'O melhor desenvolvedor que já trabalhei! Sempre traz soluções criativas e eficientes. Nosso e-commerce nunca funcionou tão bem.',
-                    rating: 5,
-                },
-            ]
-        } catch (error) {
-            console.error('Error fetching testimonials:', error)
-            return []
-        }
+    // Fetch testimonials from i18n
+    const getTestimonials = (): Testimonial[] => {
+        return [
+            {
+                name: t('testimonials.items.0.name'),
+                role: t('testimonials.items.0.role'),
+                text: t('testimonials.items.0.text'),
+                rating: 5,
+            },
+            {
+                name: t('testimonials.items.1.name'),
+                role: t('testimonials.items.1.role'),
+                text: t('testimonials.items.1.text'),
+                rating: 5,
+            },
+            {
+                name: t('testimonials.items.2.name'),
+                role: t('testimonials.items.2.role'),
+                text: t('testimonials.items.2.text'),
+                rating: 5,
+            },
+            {
+                name: t('testimonials.items.3.name'),
+                role: t('testimonials.items.3.role'),
+                text: t('testimonials.items.3.text'),
+                rating: 5,
+            },
+            {
+                name: t('testimonials.items.4.name'),
+                role: t('testimonials.items.4.role'),
+                text: t('testimonials.items.4.text'),
+                rating: 5,
+            },
+        ]
     }
 
-    // Fetch experience from API
-    const getExperience = async (): Promise<Experience[]> => {
-        try {
-            // TODO: Connect to your API
-            // const data = await $fetch<Experience[]>(`${API_BASE_URL}/experience`)
-            // return data
-
-            // Mock data for development
-            return [
-                {
-                    company: 'Freelancer',
-                    role: 'Full Stack Developer',
-                    period: '2018 - Presente',
-                    description: 'Desenvolvimento de soluções personalizadas para diversos clientes, incluindo e-commerces, sites institucionais e sistemas web. Especialização em Shopify e WordPress.',
-                },
-                {
-                    company: 'Agência Digital',
-                    role: 'Desenvolvedor Sênior',
-                    period: '2015 - 2018',
-                    description: 'Liderança técnica em projetos de grande porte, desenvolvimento de temas e plugins customizados, integração com APIs e otimização de performance.',
-                },
-                {
-                    company: 'Startup Tech',
-                    role: 'Desenvolvedor Full Stack',
-                    period: '2012 - 2015',
-                    description: 'Desenvolvimento de aplicações web escaláveis, implementação de arquiteturas modernas e trabalho em equipe ágil.',
-                },
-                {
-                    company: 'Empresa de TI',
-                    role: 'Desenvolvedor Web',
-                    period: '2009 - 2012',
-                    description: 'Início da carreira com desenvolvimento de sites institucionais, landing pages e pequenos sistemas de gestão.',
-                },
-            ]
-        } catch (error) {
-            console.error('Error fetching experience:', error)
-            return []
-        }
+    // Fetch experience from i18n
+    const getExperience = (): Experience[] => {
+        return [
+            {
+                company: t('experience.items.0.company'),
+                role: t('experience.items.0.role'),
+                period: t('experience.items.0.period'),
+                description: t('experience.items.0.description'),
+            },
+            {
+                company: t('experience.items.1.company'),
+                role: t('experience.items.1.role'),
+                period: t('experience.items.1.period'),
+                description: t('experience.items.1.description'),
+            },
+            {
+                company: t('experience.items.2.company'),
+                role: t('experience.items.2.role'),
+                period: t('experience.items.2.period'),
+                description: t('experience.items.2.description'),
+            },
+            {
+                company: t('experience.items.3.company'),
+                role: t('experience.items.3.role'),
+                period: t('experience.items.3.period'),
+                description: t('experience.items.3.description'),
+            },
+        ]
     }
 
-    // Fetch services from API
-    const getServices = async (): Promise<Service[]> => {
-        try {
-            // TODO: Connect to your API
-            // const data = await $fetch<Service[]>(`${API_BASE_URL}/services`)
-            // return data
-
-            // Mock data for development
-            return [
-                {
-                    title: 'Desenvolvimento de Sites',
-                    description: 'Sites institucionais modernos, responsivos e otimizados para SEO. Utilizo as melhores práticas e tecnologias atuais para garantir performance e usabilidade.',
-                    icon: '🌐',
-                },
-                {
-                    title: 'E-commerce',
-                    description: 'Lojas virtuais completas e personalizadas com integração de pagamento, gestão de produtos e experiência de compra otimizada. Especialista em Shopify.',
-                    icon: '🛒',
-                },
-                {
-                    title: 'Sistemas Personalizados',
-                    description: 'Desenvolvimento de sistemas web sob medida para atender necessidades específicas do seu negócio, com integração de APIs e automações.',
-                    icon: '⚙️',
-                },
-            ]
-        } catch (error) {
-            console.error('Error fetching services:', error)
-            return []
-        }
+    // Fetch services from i18n
+    const getServices = (): Service[] => {
+        return [
+            {
+                title: t('services.items.0.title'),
+                description: t('services.items.0.description'),
+                icon: '🌐',
+            },
+            {
+                title: t('services.items.1.title'),
+                description: t('services.items.1.description'),
+                icon: '🛒',
+            },
+            {
+                title: t('services.items.2.title'),
+                description: t('services.items.2.description'),
+                icon: '⚙️',
+            },
+        ]
     }
 
     return {

@@ -47,9 +47,6 @@
 
 <script setup lang="ts">
 const { getServices } = useContent()
-const services = ref<any[]>([])
 
-onMounted(async () => {
-  services.value = await getServices()
-})
+const services = computed(() => getServices())
 </script>

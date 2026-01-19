@@ -86,31 +86,31 @@
           </a>
         </div>
       </div>
+    </div>
 
-      <!-- Scroll Indicator -->
-      <div
-        v-motion
-        :initial="{ opacity: 0 }"
-        :enter="{ opacity: 1, transition: { delay: 800 } }"
-        class="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <a href="#about" class="flex flex-col items-center gap-2 group">
-          <span class="text-sm text-neutral-500 dark:text-neutral-400">Scroll</span>
-          <svg
-            class="w-6 h-6 text-neutral-500 dark:text-neutral-400 animate-bounce"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </a>
-      </div>
+    <!-- Scroll Indicator -->
+    <div
+      v-motion
+      :initial="{ opacity: 0 }"
+      :enter="{ opacity: 1, transition: { delay: 800 } }"
+      class="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+    >
+      <a href="#about" class="flex flex-col items-center gap-2 group">
+        <span class="text-sm text-neutral-500 dark:text-neutral-400">Scroll</span>
+        <svg
+          class="w-6 h-6 text-neutral-500 dark:text-neutral-400 animate-bounce"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </a>
     </div>
   </section>
 </template>

@@ -1,0 +1,171 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "experience": "Experience",
+        "services": "Services",
+        "projects": "Projects",
+        "testimonials": "Testimonials",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hi, I'm",
+        "name": "Kariston",
+        "title": "Full Stack Developer",
+        "subtitle": "Shopify & WordPress Specialist",
+        "description": "I transform ideas into amazing digital experiences. Website, e-commerce and custom systems development with over 15 years of experience.",
+        "cta": "View Projects",
+        "contact": "Get in Touch"
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle": "Developer passionate about technology",
+        "description": "With 15 years of experience in development, I specialize in creating digital solutions that drive businesses. My expertise ranges from institutional websites to complex e-commerces and custom systems.",
+        "experience": "15+ Years",
+        "experienceLabel": "of Experience",
+        "projects": "200+",
+        "projectsLabel": "Completed Projects",
+        "clients": "150+",
+        "clientsLabel": "Satisfied Clients"
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "subtitle": "My journey",
+        "items": [
+            {
+                "company": "Freelancer",
+                "role": "Full Stack Developer",
+                "period": "2018 - Present",
+                "description": "Development of custom solutions for various clients, including e-commerces, institutional websites and web systems. Specialization in Shopify and WordPress."
+            },
+            {
+                "company": "Digital Agency",
+                "role": "Senior Developer",
+                "period": "2015 - 2018",
+                "description": "Technical leadership in large projects, custom theme and plugin development, API integration and performance optimization."
+            },
+            {
+                "company": "Tech Startup",
+                "role": "Full Stack Developer",
+                "period": "2012 - 2015",
+                "description": "Development of scalable web applications, implementation of modern architectures and work in agile teams."
+            },
+            {
+                "company": "IT Company",
+                "role": "Web Developer",
+                "period": "2009 - 2012",
+                "description": "Career start with development of institutional websites, landing pages and small management systems."
+            }
+        ]
+    },
+    "services": {
+        "title": "Services",
+        "subtitle": "What I do",
+        "items": [
+            {
+                "title": "Website Development",
+                "description": "Modern, responsive and SEO-optimized institutional websites. I use best practices and current technologies to ensure performance and usability.",
+                "icon": "🌐"
+            },
+            {
+                "title": "E-commerce",
+                "description": "Complete and customized online stores with payment integration, product management and optimized shopping experience. Shopify specialist.",
+                "icon": "🛒"
+            },
+            {
+                "title": "Custom Systems",
+                "description": "Tailored web systems development to meet your business specific needs, with API integration and automation.",
+                "icon": "⚙️"
+            }
+        ]
+    },
+    "projects": {
+        "title": "Recent Projects",
+        "subtitle": "Featured work",
+        "viewProject": "View Project",
+        "items": [
+            {
+                "title": "Fashion E-commerce",
+                "description": "Complete online store with payment integration, inventory management system and administrative panel.",
+                "type": "E-commerce",
+                "image": "/images/project-1.jpg",
+                "link": "#"
+            },
+            {
+                "title": "Corporate Website",
+                "description": "Modern and responsive website for tech company with animations and minimalist design.",
+                "type": "Website",
+                "image": "/images/project-2.jpg",
+                "link": "#"
+            },
+            {
+                "title": "Management System",
+                "description": "Web platform for internal process management with interactive dashboard and custom reports.",
+                "type": "System",
+                "image": "/images/project-3.jpg",
+                "link": "#"
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "subtitle": "What people say about my work",
+        "items": [
+            {
+                "name": "Ana Silva",
+                "role": "CEO, Fashion Store",
+                "text": "Exceptional work! Kariston developed our online store from scratch and exceeded all expectations. Professional, dedicated and always available to help.",
+                "rating": 5
+            },
+            {
+                "name": "Carlos Mendes",
+                "role": "IT Director, Tech Solutions",
+                "text": "Excellent developer! Delivered our project on time and with superior quality. I highly recommend his services.",
+                "rating": 5
+            },
+            {
+                "name": "Marina Costa",
+                "role": "Founder, Creative Studio",
+                "text": "Long-term partnership! Kariston always delivers amazing websites and is very attentive to details. Our website turned out perfect!",
+                "rating": 5
+            },
+            {
+                "name": "Ricardo Oliveira",
+                "role": "Manager, XYZ Company",
+                "text": "Highly qualified professional. Developed a custom system that completely optimized our internal processes.",
+                "rating": 5
+            },
+            {
+                "name": "Juliana Ferreira",
+                "role": "E-commerce Manager",
+                "text": "The best developer I've ever worked with! Always brings creative and efficient solutions. Our e-commerce has never worked so well.",
+                "rating": 5
+            }
+        ]
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "subtitle": "Let's work together",
+        "description": "Have a project in mind? Let's talk about how I can help turn your idea into reality.",
+        "form": {
+            "name": "Name",
+            "namePlaceholder": "Your name",
+            "email": "Email",
+            "emailPlaceholder": "youremail{'@'}example.com",
+            "message": "Message",
+            "messagePlaceholder": "Tell me about your project...",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully! I'll get in touch soon.",
+            "error": "Error sending message. Please try again."
+        }
+    },
+    "footer": {
+        "copyright": "© 2026 Kariston Dev. All rights reserved.",
+        "madeWith": "Made with ❤️"
+    },
+    "theme": {
+        "light": "Light Mode",
+        "dark": "Dark Mode"
+    }
+}

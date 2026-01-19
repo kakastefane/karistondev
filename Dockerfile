@@ -1,5 +1,5 @@
 # ARG definitions
-ARG NODE_VERSION=18.17.1
+ARG NODE_VERSION=20.11.1
 
 # Stage 1: Build
 FROM node:${NODE_VERSION}-alpine as builder
